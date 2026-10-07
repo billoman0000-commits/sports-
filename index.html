@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adithyan C | Digital Marketing &amp; AI Video Creator</title>
+  <meta name="description" content="Adithyan C — Digital Marketing student focused on Performance Marketing, Meta Ads, E-commerce and AI-powered video content creation.">
+  <meta name="author" content="Adithyan C">
+  <meta name="keywords" content="Adithyan C, Digital Marketing, Performance Marketing, Meta Ads, AI Video Creation, Image to Video, Prompt Engineering, E-commerce, Kerala India">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Adithyan C | Digital Marketing &amp; AI Video Creator">
+  <meta property="og:description" content="Digital Marketing student focused on Performance Marketing, Meta Ads, E-commerce and AI-powered content creation.">
+  <meta property="og:image" content="./assets/adithyan-logo.png">
+
+  <!-- Theme color -->
+  <meta name="theme-color" content="#08080a">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+  <!-- Subtle Background Grid & Noise Overlay -->
+  <div class="ambient-mesh" aria-hidden="true">
+    <div class="mesh-orb orb-1"></div>
+    <div class="mesh-orb orb-2"></div>
+    <div class="mesh-grid"></div>
+  </div>
+
+  <!-- Custom Cursor for Desktop -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true">
+    <span class="cursor-label" id="cursorLabel"></span>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification" role="alert" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span class="toast-message" id="toastMessage">Copied to clipboard!</span>
+  </div>
+
+  <!-- STICKY NAVIGATION -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <!-- Brand Logo / Monogram -->
+      <a href="#hero" class="brand-link" aria-label="Adithyan C Home">
+        <div class="brand-monogram">
+          <img src="assets/adithyan-logo.png" alt="Adithyan C Monogram" class="brand-logo-img">
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">ADITHYAN C</span>
+          <span class="brand-badge"><span class="badge-dot"></span> Available for Hire</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li class="nav-item"><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li class="nav-item"><a href="#tools" class="nav-link" data-section="tools">Tools</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li class="nav-item"><a href="#process" class="nav-link" data-section="process">Process</a></li>
+        <li class="nav-item"><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li class="nav-item"><a href="#why-me" class="nav-link" data-section="why-me">Why Me</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <!-- CTA Button -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-nav-cta magnetic-btn">
+          <span>Let's Work Together</span>
+          <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu-container">
+      <div class="mobile-menu-header">
+        <span class="mobile-brand-title">ADITHYAN C</span>
+        <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="#hero" class="mobile-nav-link">01. Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">02. About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">03. Skills</a></li>
+        <li><a href="#tools" class="mobile-nav-link">04. Tools</a></li>
+        <li><a href="#projects" class="mobile-nav-link">05. Projects</a></li>
+        <li><a href="#process" class="mobile-nav-link">06. Process</a></li>
+        <li><a href="#experience" class="mobile-nav-link">07. Experience</a></li>
+        <li><a href="#why-me" class="mobile-nav-link">08. Why Adithyan</a></li>
+        <li><a href="#contact" class="mobile-nav-link">09. Contact</a></li>
+      </ul>
+      <div class="mobile-menu-footer">
+        <a href="#contact" class="btn btn-primary full-width mobile-contact-btn">Let's Work Together</a>
+        <p class="mobile-location-tag">📍 Based in Kerala, India</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        <!-- Hero Left / Content -->
+        <div class="hero-content">
+          <!-- Small Intro Badge -->
+          <div class="hero-badge reveal-item" style="--order: 1;">
+            <span class="badge-sparkle">✦</span>
+            <span class="badge-text">Hi, I'm Adithyan.</span>
+            <span class="badge-location">📍 Kerala, India</span>
+          </div>
+
+          <!-- Role Label -->
+          <div class="hero-role-pill reveal-item" style="--order: 2;">
+            <span class="role-text">DIGITAL MARKETING</span>
+            <span class="role-cross">×</span>
+            <span class="role-text highlight-lime">AI VIDEO CREATOR</span>
+          </div>
+
+          <!-- Main Impact Headline -->
+          <h1 class="hero-headline reveal-item" style="--order: 3;">
+            <span class="headline-row">TURNING <span class="text-lime text-glow">IDEAS</span></span>
+            <span class="headline-row">INTO <span class="highlight-wrapper">DIGITAL<svg class="hand-drawn-underline" viewBox="0 0 260 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 14C60 6 180 4 256 12C190 18 80 18 20 16" stroke="var(--lime-accent)" stroke-width="4" stroke-linecap="round"/></svg></span></span>
+            <span class="headline-row">EXPERIENCES.</span>
+          </h1>
+
+          <!-- Supporting Text -->
+          <p class="hero-description reveal-item" style="--order: 4;">
+            Digital Marketing student focused on <strong>Performance Marketing</strong> and <strong>Meta Ads</strong>, while building practical skills in <strong>AI-powered video creation</strong>, prompting, image-to-video workflows, and digital content.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="hero-ctas reveal-item" style="--order: 5;">
+            <a href="#projects" class="btn btn-primary magnetic-btn" data-cursor="VIEW WORK">
+              <span>VIEW MY WORK</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary magnetic-btn" data-cursor="CONTACT">
+              <span>LET'S CONNECT</span>
+              <span class="btn-dot-live"></span>
+            </a>
+          </div>
+
+          <!-- Secondary Micro Info -->
+          <div class="hero-footer-tags reveal-item" style="--order: 6;">
+            <div class="tag-item">
+              <span class="tag-icon">⚡</span>
+              <span>Fast Iteration</span>
+            </div>
+            <div class="tag-item">
+              <span class="tag-icon">🎯</span>
+              <span>Performance Focused</span>
+            </div>
+            <div class="tag-item">
+              <span class="tag-icon">🤖</span>
+              <span>GenAI Native</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right / Visual Stage (Interactive HUD + 3D Glass Showcase) -->
+        <div class="hero-visual-stage reveal-item" style="--order: 4;" id="heroVisualStage">
+          <!-- Decorative Floating Stickers / Doodles inspired by reference -->
+          <div class="sticker-doodle doodle-crown" aria-hidden="true">
+            <svg width="44" height="34" viewBox="0 0 54 44" fill="none">
+              <path d="M4 36L10 10L24 26L38 6L44 36H4Z" stroke="var(--lime-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="10" cy="10" r="3" fill="var(--lime-accent)"/>
+              <circle cx="24" cy="26" r="3" fill="var(--lime-accent)"/>
+              <circle cx="38" cy="6" r="3" fill="var(--lime-accent)"/>
+            </svg>
+          </div>
+
+          <div class="sticker-doodle doodle-sparkle" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="var(--purple-accent)"/>
+            </svg>
+          </div>
+
+          <!-- Main Interactive Creative Console Card -->
+          <div class="hero-card-3d" id="heroCard3D">
+            <!-- Card Top Bar / HUD -->
+            <div class="card-hud-bar">
+              <div class="hud-dots">
+                <span class="hud-dot red"></span>
+                <span class="hud-dot yellow"></span>
+                <span class="hud-dot green"></span>
+              </div>
+              <div class="hud-pill">
+                <span class="hud-live-indicator"></span>
+                <span>AI CREATIVE LAB • V2.6</span>
+              </div>
+              <div class="hud-res">4K READY</div>
+            </div>
+
+            <!-- Video Preview Window inside HUD -->
+            <div class="card-video-window">
+              <video class="hero-mini-video" autoplay muted loop playsinline poster="assets/ai-video-poster.png">
+                <source src="assets/bently.mp4" type="video/mp4">
+              </video>
+              <div class="video-overlay-gradient"></div>
+              
+              <!-- Video Floating Tag -->
+              <div class="floating-hud-tag tag-top-left">
+                <span class="tag-dot-green"></span>
+                <span class="tag-title">BENTLEY GT AI AD</span>
+              </div>
+
+              <div class="floating-hud-tag tag-bottom-right">
+                <span class="tag-icon">🎬</span>
+                <span>IMAGE-TO-VIDEO 60FPS</span>
+              </div>
+            </div>
+
+            <!-- Marketing Metrics Live HUD Row -->
+            <div class="hud-metrics-row">
+              <div class="metric-hud-box">
+                <span class="metric-hud-label">CAMPAIGN FOCUS</span>
+                <span class="metric-hud-val text-lime">Meta Ads &amp; ROAS</span>
+              </div>
+              <div class="metric-hud-box">
+                <span class="metric-hud-label">AI WORKFLOW</span>
+                <span class="metric-hud-val">Prompt → Motion</span>
+              </div>
+              <div class="metric-hud-box">
+                <span class="metric-hud-label">E-COMMERCE</span>
+                <span class="metric-hud-val text-purple">Carnottix Brand</span>
+              </div>
+            </div>
+
+            <!-- Interactive Workflow Pill Bar -->
+            <div class="hud-workflow-bar">
+              <span class="wf-step active">RESEARCH</span>
+              <span class="wf-arrow">→</span>
+              <span class="wf-step active">PROMPTING</span>
+              <span class="wf-arrow">→</span>
+              <span class="wf-step active">GEN AI</span>
+              <span class="wf-arrow">→</span>
+              <span class="wf-step">TEST &amp; ITERATE</span>
+            </div>
+          </div>
+
+          <!-- Secondary Floating Glass Pill: Real Projects Only -->
+          <div class="floating-badge-glass badge-experience">
+            <div class="badge-icon-wrap">
+              <span class="badge-icon-inner">🎯</span>
+            </div>
+            <div class="badge-text-group">
+              <span class="badge-title">PRACTICAL TESTED</span>
+              <span class="badge-subtitle">Real campaigns &amp; content</span>
+            </div>
+          </div>
+
+          <!-- Secondary Floating Glass Pill: Location / Availability -->
+          <div class="floating-badge-glass badge-available">
+            <span class="status-pulse-dot"></span>
+            <span class="badge-text-single">OPEN FOR ROLES &amp; PROJECTS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#marquee" class="hero-scroll-indicator" aria-label="Scroll to explore">
+        <span class="mouse-icon">
+          <span class="mouse-wheel"></span>
+        </span>
+        <span class="scroll-text">SCROLL TO EXPLORE</span>
+      </a>
+    </section>
+
+    <!-- INFINITE MARQUEE SECTION -->
+    <section class="marquee-section" id="marquee" aria-label="Expertise Marquee">
+      <div class="marquee-wrapper">
+        <div class="marquee-track">
+          <!-- Repeated for seamless infinite loop -->
+          <div class="marquee-content">
+            <span class="marquee-item text-white">PERFORMANCE MARKETING</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item text-lime">META ADS</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item text-white">AI VIDEO</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item text-lime">PROMPTING</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item text-white">IMAGE-TO-VIDEO</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item text-lime">VIDEO EDITING</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item text-white">E-COMMERCE</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item text-lime">DIGITAL MARKETING</span>
+            <span class="marquee-star">✦</span>
+          </div>
+          <div class="marquee-content" aria-hidden="true">
+            <span class="marquee-item text-white">PERFORMANCE MARKETING</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item text-lime">META ADS</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item text-white">AI VIDEO</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item text-lime">PROMPTING</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item text-white">IMAGE-TO-VIDEO</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item text-lime">VIDEO EDITING</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item text-white">E-COMMERCE</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item text-lime">DIGITAL MARKETING</span>
+            <span class="marquee-star">✦</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section section-padding" id="about">
+      <div class="section-container">
+        <!-- Section Eyebrow -->
+        <div class="section-header">
+          <div class="section-tag-wrapper">
+            <span class="section-tag">[ ABOUT ME ]</span>
+            <span class="tag-sparkle">✦</span>
+          </div>
+          <h2 class="section-title">
+            BRIDGING <span class="text-lime">MARKETING LOGIC</span><br>WITH AI CREATIVE SPEED.
+          </h2>
+        </div>
+
+        <!-- Split Screen Layout -->
+        <div class="about-grid">
+          <!-- Left: Abstract Stylized Profile Card -->
+          <div class="about-visual-col">
+            <div class="about-profile-card">
+              <div class="profile-card-glow"></div>
+              
+              <!-- Monogram Showcase -->
+              <div class="profile-monogram-container">
+                <img src="assets/adithyan-logo.png" alt="Adithyan Monogram Brand" class="profile-monogram-img">
+                <div class="monogram-backdrop-circle"></div>
+              </div>
+
+              <!-- Graphic Stickers -->
+              <div class="profile-sticker sticker-top">
+                <span class="sticker-dot"></span>
+                <span>PASSION • PRECISION</span>
+              </div>
+
+              <div class="profile-sticker sticker-bottom">
+                <span class="sticker-icon">⚡</span>
+                <span>EST. KERALA, INDIA</span>
+              </div>
+
+              <!-- Footer Bar inside card -->
+              <div class="profile-card-footer">
+                <div class="profile-name-tag">
+                  <h3>ADITHYAN C</h3>
+                  <p>Digital Marketer &amp; AI Creator</p>
+                </div>
+                <div class="profile-symbol">
+                  <span class="symbol-infinity">∞</span>
+                  <span class="symbol-label">Always Learning</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Bio & Practical Learning Pillars -->
+          <div class="about-text-col">
+            <div class="bio-lead-box">
+              <p class="bio-lead">
+                "I'm <strong>Adithyan C</strong> — a Digital Marketing student focused on <strong>Performance Marketing</strong>, <strong>Meta Ads</strong>, and <strong>e-commerce</strong>, while developing practical skills in <strong>AI-powered content creation</strong>."
+              </p>
+            </div>
+
+            <p class="bio-paragraph">
+              Rather than theoretical concepts alone, my foundation is built on hands-on trial, strategic testing, and building practical marketing assets. I combine traditional marketing strategy with the rapid ideation made possible by artificial intelligence.
+            </p>
+
+            <!-- Practical Learning Breakdown -->
+            <div class="practical-pillars">
+              <h4 class="pillars-heading">PRACTICAL LEARNING &amp; FOUNDATIONS:</h4>
+              <div class="pillars-grid">
+                <div class="pillar-card">
+                  <div class="pillar-icon">🎓</div>
+                  <div class="pillar-content">
+                    <h5>Digital Marketing Course</h5>
+                    <p>Structured, comprehensive training in campaign architecture, targeting &amp; sales funnels.</p>
+                  </div>
+                </div>
+
+                <div class="pillar-card">
+                  <div class="pillar-icon">⚡</div>
+                  <div class="pillar-content">
+                    <h5>Practical Training</h5>
+                    <p>Hands-on setup in Meta Ads Manager, creative iteration &amp; audience targeting tests.</p>
+                  </div>
+                </div>
+
+                <div class="pillar-card">
+                  <div class="pillar-icon">🧠</div>
+                  <div class="pillar-content">
+                    <h5>Self-Directed Learning</h5>
+                    <p>Continuous study of AI video generation models, prompt crafting, and digital commerce tactics.</p>
+                  </div>
+                </div>
+
+                <div class="pillar-card">
+                  <div class="pillar-icon">🛍️</div>
+                  <div class="pillar-content">
+                    <h5>Personal E-commerce Project</h5>
+                    <p>Founding and managing Carnottix — handling branding, pricing, sales &amp; operations.</p>
+                  </div>
+                </div>
+
+                <div class="pillar-card pillar-card-full">
+                  <div class="pillar-icon">🎬</div>
+                  <div class="pillar-content">
+                    <h5>AI Content Projects</h5>
+                    <p>Creating promotional automotive and commercial video assets using text-to-video and image-to-video tools.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="about-action">
+              <a href="#experience" class="btn btn-secondary magnetic-btn">
+                <span>MORE ABOUT ME</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION ("WHAT I WORK WITH") -->
+    <section class="skills-section section-padding" id="skills">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-tag-wrapper">
+            <span class="section-tag">[ CAPABILITIES ]</span>
+            <span class="tag-sparkle">✦</span>
+          </div>
+          <h2 class="section-title">
+            WHAT I <span class="text-lime">WORK WITH</span>
+          </h2>
+          <p class="section-subtitle">
+            Core skills developed through hands-on coursework, practical campaign tests, e-commerce operations, and AI creative workflows.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="skills-filter-tabs" role="tablist">
+          <button class="filter-tab active" data-filter="all">All Skills (11)</button>
+          <button class="filter-tab" data-filter="marketing">Performance &amp; Ads</button>
+          <button class="filter-tab" data-filter="ai">AI &amp; Creative</button>
+          <button class="filter-tab" data-filter="business">E-commerce &amp; Sales</button>
+        </div>
+
+        <!-- 11 Interactive Skill Cards (NO fake percentage bars!) -->
+        <div class="skills-grid" id="skillsGrid">
+          <!-- 01 -->
+          <div class="skill-card" data-category="marketing">
+            <div class="skill-card-inner">
+              <div class="skill-top">
+                <span class="skill-num">01</span>
+                <span class="skill-badge">ADS</span>
+              </div>
+              <h3 class="skill-title">Meta Ads &amp; Campaign Management</h3>
+              <p class="skill-desc">Structuring campaigns, setting ad sets, audience interest testing, placement optimization, and ad copy variations.</p>
+              <div class="skill-tags">
+                <span>Meta Ads Manager</span>
+                <span>Testing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02 -->
+          <div class="skill-card" data-category="marketing">
+            <div class="skill-card-inner">
+              <div class="skill-top">
+                <span class="skill-num">02</span>
+                <span class="skill-badge">GROWTH</span>
+              </div>
+              <h3 class="skill-title">Performance Marketing</h3>
+              <p class="skill-desc">Understanding customer acquisition funnels, CTR analysis, hook rate testing, and marketing iteration.</p>
+              <div class="skill-tags">
+                <span>Funnels</span>
+                <span>A/B Testing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03 -->
+          <div class="skill-card" data-category="ai">
+            <div class="skill-card-inner">
+              <div class="skill-top">
+                <span class="skill-num">03</span>
+                <span class="skill-badge">GEN AI</span>
+              </div>
+              <h3 class="skill-title">AI Video Generation</h3>
+              <p class="skill-desc">Generating cinematic, commercial video clips from prompts with realistic camera motion, lighting, and pacing.</p>
+              <div class="skill-tags">
+                <span>Text-to-Video</span>
+                <span>Cinematic</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 04 -->
+          <div class="skill-card" data-category="ai">
+            <div class="skill-card-inner">
+              <div class="skill-top">
+                <span class="skill-num">04</span>
+                <span class="skill-badge">MOTION</span>
+              </div>
+              <h3 class="skill-title">Image-to-Video</h3>
+              <p class="skill-desc">Transforming static product photos, car stills, and concept art into fluid dynamic video sequences.</p>
+              <div class="skill-tags">
+                <span>Keyframing</span>
+                <span>Motion Control</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 05 -->
+          <div class="skill-card" data-category="ai">
+            <div class="skill-card-inner">
+              <div class="skill-top">
+                <span class="skill-num">05</span>
+                <span class="skill-badge">AI LOGIC</span>
+              </div>
+              <h3 class="skill-title">Prompt Engineering</h3>
+              <p class="skill-desc">Crafting precise, descriptive prompts for lighting, camera lenses, aesthetics, motion speed, and stylistic consistency.</p>
+              <div class="skill-tags">
+                <span>Prompt Architecture</span>
+                <span>Directing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 06 -->
+          <div class="skill-card" data-category="ai">
+            <div class="skill-card-inner">
+              <div class="skill-top">
+                <span class="skill-num">06</span>
+                <span class="skill-badge">EDITING</span>
+              </div>
+              <h3 class="skill-title">Video Editing</h3>
+              <p class="skill-desc">Trimming for retention, sound design, music synchronization, typography hooks, and vertical short-form formats.</p>
+              <div class="skill-tags">
+                <span>CapCut</span>
+                <span>Pacing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 07 -->
+          <div class="skill-card" data-category="business">
+            <div class="skill-card-inner">
+              <div class="skill-top">
+                <span class="skill-num">07</span>
+                <span class="skill-badge">COMMERCE</span>
+              </div>
+              <h3 class="skill-title">E-commerce</h3>
+              <p class="skill-desc">Managing product operations, online store workflows, order logistics, packaging, and catalog management.</p>
+              <div class="skill-tags">
+                <span>Carnottix</span>
+                <span>Operations</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 08 -->
+          <div class="skill-card" data-category="marketing">
+            <div class="skill-card-inner">
+              <div class="skill-top">
+                <span class="skill-num">08</span>
+                <span class="skill-badge">STRATEGY</span>
+              </div>
+              <h3 class="skill-title">Digital Marketing</h3>
+              <p class="skill-desc">Holistic understanding of content distribution, brand positioning, audience segmentation, and multi-channel reach.</p>
+              <div class="skill-tags">
+                <span>Targeting</span>
+                <span>Distribution</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 09 -->
+          <div class="skill-card" data-category="business">
+            <div class="skill-card-inner">
+              <div class="skill-top">
+                <span class="skill-num">09</span>
+                <span class="skill-badge">IDENTITY</span>
+              </div>
+              <h3 class="skill-title">Branding</h3>
+              <p class="skill-desc">Developing cohesive visual language, brand personality, tone of voice, logos, and product aesthetics.</p>
+              <div class="skill-tags">
+                <span>Visual Identity</span>
+                <span>Positioning</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10 -->
+          <div class="skill-card" data-category="business">
+            <div class="skill-card-inner">
+              <div class="skill-top">
+                <span class="skill-num">10</span>
+                <span class="skill-badge">PRODUCT</span>
+              </div>
+              <h3 class="skill-title">Product Marketing</h3>
+              <p class="skill-desc">Highlighting product features as compelling benefits, competitive positioning, and consumer-centric messaging.</p>
+              <div class="skill-tags">
+                <span>Value Prop</span>
+                <span>Market Fit</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11 -->
+          <div class="skill-card" data-category="business">
+            <div class="skill-card-inner">
+              <div class="skill-top">
+                <span class="skill-num">11</span>
+                <span class="skill-badge">COMMUNICATION</span>
+              </div>
+              <h3 class="skill-title">Sales</h3>
+              <p class="skill-desc">Customer conversations, inquiry handling, objection resolution, pricing discussions, and relationship building.</p>
+              <div class="skill-tags">
+                <span>Customer Care</span>
+                <span>Closing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS SECTION ("TOOLS I USE") -->
+    <section class="tools-section" id="tools">
+      <div class="tools-container">
+        <div class="tools-header-row">
+          <div class="tools-label-col">
+            <span class="tools-eyebrow">STACK &amp; PLATFORMS</span>
+            <h3 class="tools-title">TOOLS I USE</h3>
+          </div>
+          <p class="tools-subtitle">Daily platforms leveraged for campaign management, creative generation, video polishing, and strategic ideation.</p>
+        </div>
+
+        <div class="tools-grid">
+          <!-- Meta Ads Manager -->
+          <div class="tool-item-card">
+            <div class="tool-icon-box">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill="#0081FB"/>
+              </svg>
+            </div>
+            <div class="tool-meta">
+              <span class="tool-name">Meta Ads Manager</span>
+              <span class="tool-role">Campaign Ops &amp; Testing</span>
+            </div>
+          </div>
+
+          <!-- Canva -->
+          <div class="tool-item-card">
+            <div class="tool-icon-box">
+              <div class="tool-custom-badge canva-badge">Cv</div>
+            </div>
+            <div class="tool-meta">
+              <span class="tool-name">Canva</span>
+              <span class="tool-role">Ad Design &amp; Layouts</span>
+            </div>
+          </div>
+
+          <!-- CapCut -->
+          <div class="tool-item-card">
+            <div class="tool-icon-box">
+              <div class="tool-custom-badge capcut-badge">✂</div>
+            </div>
+            <div class="tool-meta">
+              <span class="tool-name">CapCut</span>
+              <span class="tool-role">Short-Form Video Editing</span>
+            </div>
+          </div>
+
+          <!-- ChatGPT -->
+          <div class="tool-item-card">
+            <div class="tool-icon-box">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                <path d="M20.5 9.5C20.3 8.3 19.5 7.3 18.4 6.8C18.6 5.4 17.9 4 16.7 3.3C15.4 2.5 13.8 2.7 12.8 3.7C11.9 3 10.7 2.8 9.6 3.1C8.5 3.5 7.6 4.4 7.3 5.5C6.1 5.9 5.2 6.8 4.8 8C4.4 9.2 4.6 10.6 5.4 11.5C5.1 12.7 5.5 14 6.4 14.9C6.1 16.3 6.9 17.7 8.2 18.3C9.5 18.9 11 18.6 12 17.7C12.9 18.4 14.1 18.6 15.2 18.2C16.3 17.8 17.2 16.9 17.5 15.8C18.7 15.4 19.6 14.4 19.9 13.2C20.3 12 20.1 10.6 19.3 9.7L20.5 9.5Z" stroke="#10A37F" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="tool-meta">
+              <span class="tool-name">ChatGPT</span>
+              <span class="tool-role">Copywriting &amp; Prompts</span>
+            </div>
+          </div>
+
+          <!-- Gemini -->
+          <div class="tool-item-card">
+            <div class="tool-icon-box">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2L12 2Z" fill="url(#geminiGrad)"/>
+                <defs>
+                  <linearGradient id="geminiGrad" x1="2" y1="2" x2="22" y2="22">
+                    <stop stop-color="#4E88FF"/>
+                    <stop offset="1" stop-color="#A259FF"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="tool-meta">
+              <span class="tool-name">Gemini</span>
+              <span class="tool-role">Strategy &amp; Brainstorming</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS ("SELECTED WORK") -->
+    <section class="projects-section section-padding" id="projects">
+      <div class="section-container">
+        <!-- Section Header -->
+        <div class="projects-header-wrapper">
+          <div>
+            <div class="section-tag-wrapper">
+              <span class="section-tag">[ PORTFOLIO ]</span>
+              <span class="tag-sparkle">✦</span>
+            </div>
+            <h2 class="section-title">
+              SELECTED <span class="text-lime">WORK</span>
+            </h2>
+            <p class="section-subtitle">
+              Projects built while learning, experimenting, and applying digital marketing and AI-powered content creation.
+            </p>
+          </div>
+
+          <div class="projects-controls">
+            <span class="counter-badge">5 Case Studies</span>
+          </div>
+        </div>
+
+        <!-- Project Cards Grid / Horizontal Showcase -->
+        <div class="projects-grid">
+          <!-- PROJECT 01: BENTLY -->
+          <article class="project-card" data-project-id="1">
+            <div class="project-card-media">
+              <div class="video-container" data-cursor="PLAY">
+                <video class="project-preview-video" muted loop playsinline preload="metadata" poster="assets/ai-video-poster.png">
+                  <source src="assets/bently.mp4" type="video/mp4">
+                </video>
+                <div class="video-play-overlay">
+                  <div class="play-btn-circle">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                  </div>
+                </div>
+                <div class="media-live-tag">
+                  <span class="tag-dot"></span>
+                  <span>AI VIDEO</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card-info">
+              <div class="project-meta-row">
+                <span class="project-number">PROJECT 01</span>
+                <span class="project-category">AI Video Creation / Automotive Content</span>
+              </div>
+              <h3 class="project-title">BENTLY — Cinematic Automotive Showcase</h3>
+              <p class="project-desc">
+                High-end automotive commercial crafted through multi-stage AI video prompting, camera dynamics control, and atmospheric grading.
+              </p>
+              <div class="project-card-footer">
+                <button class="btn btn-outline view-project-btn magnetic-btn" data-project-id="1">
+                  <span>VIEW PROJECT</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 02: EVERY BOY'S DREAM -->
+          <article class="project-card" data-project-id="2">
+            <div class="project-card-media">
+              <div class="video-container" data-cursor="PLAY">
+                <video class="project-preview-video" muted loop playsinline preload="metadata">
+                  <source src="assets/every-boys-dream.mp4" type="video/mp4">
+                </video>
+                <div class="video-play-overlay">
+                  <div class="play-btn-circle">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                  </div>
+                </div>
+                <div class="media-live-tag">
+                  <span class="tag-dot"></span>
+                  <span>STORYTELLING</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card-info">
+              <div class="project-meta-row">
+                <span class="project-number">PROJECT 02</span>
+                <span class="project-category">AI Video Creation / Automotive Visual Storytelling</span>
+              </div>
+              <h3 class="project-title">EVERY BOY'S DREAM — Automotive Storytelling</h3>
+              <p class="project-desc">
+                A narrative visual exploration capturing automotive passion, combining text-to-video framing, emotional pacing, and refined transitions.
+              </p>
+              <div class="project-card-footer">
+                <button class="btn btn-outline view-project-btn magnetic-btn" data-project-id="2">
+                  <span>VIEW PROJECT</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 03: E-COMMERCE BUSINESS PROJECT -->
+          <article class="project-card" data-project-id="3">
+            <div class="project-card-media">
+              <div class="video-container" data-cursor="PLAY">
+                <video class="project-preview-video" muted loop playsinline preload="metadata">
+                  <source src="assets/carnottix-video.mp4" type="video/mp4">
+                </video>
+                <div class="video-play-overlay">
+                  <div class="play-btn-circle">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                  </div>
+                </div>
+                <div class="media-live-tag">
+                  <span class="tag-dot"></span>
+                  <span>E-COMMERCE</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card-info">
+              <div class="project-meta-row">
+                <span class="project-number">PROJECT 03</span>
+                <span class="project-category">E-commerce / Digital Marketing</span>
+              </div>
+              <h3 class="project-title">CARNOTTIX — E-Commerce Business Project</h3>
+              <p class="project-desc">
+                Built and managed a personal product-based e-commerce business project, working across branding, product marketing, pricing, sales, customer communication and online business operations.
+              </p>
+              <div class="project-card-footer">
+                <button class="btn btn-outline view-project-btn magnetic-btn" data-project-id="3">
+                  <span>VIEW PROJECT</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 04: META ADS CAMPAIGNS -->
+          <article class="project-card" data-project-id="4">
+            <div class="project-card-media">
+              <div class="image-showcase-container" data-cursor="VIEW">
+                <img src="assets/bmc-supershield.png" alt="Meta Ads Campaign Creative Sample" class="project-preview-img">
+                <div class="media-live-tag">
+                  <span class="tag-dot"></span>
+                  <span>PERFORMANCE</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card-info">
+              <div class="project-meta-row">
+                <span class="project-number">PROJECT 04</span>
+                <span class="project-category">Performance Marketing / Meta Ads</span>
+              </div>
+              <h3 class="project-title">META ADS CAMPAIGNS — Practical Testing</h3>
+              <p class="project-desc">
+                Created and tested Meta Ads campaigns while gaining practical exposure to customer acquisition, campaign testing and marketing iteration.
+              </p>
+              <div class="project-card-footer">
+                <button class="btn btn-outline view-project-btn magnetic-btn" data-project-id="4">
+                  <span>VIEW PROJECT</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 05: AI CONTENT PROJECTS -->
+          <article class="project-card" data-project-id="5">
+            <div class="project-card-media">
+              <div class="image-showcase-container" data-cursor="VIEW">
+                <img src="assets/ai-video-poster.png" alt="AI Video Creation Services Poster" class="project-preview-img">
+                <div class="media-live-tag">
+                  <span class="tag-dot"></span>
+                  <span>CONTENT LAB</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card-info">
+              <div class="project-meta-row">
+                <span class="project-number">PROJECT 05</span>
+                <span class="project-category">AI Content Creation</span>
+              </div>
+              <h3 class="project-title">AI CONTENT PROJECTS — Service &amp; Prompts</h3>
+              <p class="project-desc">
+                Created AI-powered video content using text-to-video and image-to-video workflows, developed prompts for promotional content and edited short-form videos for digital marketing.
+              </p>
+              <div class="project-card-footer">
+                <button class="btn btn-outline view-project-btn magnetic-btn" data-project-id="5">
+                  <span>VIEW PROJECT</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process-section section-padding" id="process">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-tag-wrapper">
+            <span class="section-tag">[ METHODOLOGY ]</span>
+            <span class="tag-sparkle">✦</span>
+          </div>
+          <h2 class="section-title">
+            THE CREATIVE &amp; <span class="text-lime">MARKETING PROCESS</span>
+          </h2>
+          <p class="section-subtitle">
+            A structured six-step workflow bridging strategic marketing objectives with agile AI generation and iterative refinement.
+          </p>
+        </div>
+
+        <!-- Horizontal Process Timeline -->
+        <div class="process-timeline" id="processTimeline">
+          <div class="timeline-line-track">
+            <div class="timeline-line-fill" id="timelineLineFill"></div>
+          </div>
+
+          <div class="timeline-grid">
+            <!-- 01 RESEARCH -->
+            <div class="process-step" data-step="1">
+              <div class="step-marker">
+                <span class="marker-circle"></span>
+                <span class="step-num">01</span>
+              </div>
+              <div class="step-card">
+                <h3 class="step-title">RESEARCH</h3>
+                <p class="step-desc">Audience pain points, competitor creatives, ad benchmarks, and target persona behavior analysis.</p>
+                <span class="step-tag">Market Insights</span>
+              </div>
+            </div>
+
+            <!-- 02 IDEATE -->
+            <div class="process-step" data-step="2">
+              <div class="step-marker">
+                <span class="marker-circle"></span>
+                <span class="step-num">02</span>
+              </div>
+              <div class="step-card">
+                <h3 class="step-title">IDEATE</h3>
+                <p class="step-desc">Developing hooks, storyboard concepts, script directions, and visual style prompts.</p>
+                <span class="step-tag">Angle Discovery</span>
+              </div>
+            </div>
+
+            <!-- 03 CREATE -->
+            <div class="process-step" data-step="3">
+              <div class="step-marker">
+                <span class="marker-circle"></span>
+                <span class="step-num">03</span>
+              </div>
+              <div class="step-card">
+                <h3 class="step-title">CREATE</h3>
+                <p class="step-desc">Generating AI video scenes, image-to-video iterations, ad copy copywriting, and visual assets.</p>
+                <span class="step-tag">GenAI Synthesis</span>
+              </div>
+            </div>
+
+            <!-- 04 EDIT -->
+            <div class="process-step" data-step="4">
+              <div class="step-marker">
+                <span class="marker-circle"></span>
+                <span class="step-num">04</span>
+              </div>
+              <div class="step-card">
+                <h3 class="step-title">EDIT</h3>
+                <p class="step-desc">Pacing cuts for retention, sound design, typography overlays, color grading, and format adaptation.</p>
+                <span class="step-tag">Retention Polish</span>
+              </div>
+            </div>
+
+            <!-- 05 TEST -->
+            <div class="process-step" data-step="5">
+              <div class="step-marker">
+                <span class="marker-circle"></span>
+                <span class="step-num">05</span>
+              </div>
+              <div class="step-card">
+                <h3 class="step-title">TEST</h3>
+                <p class="step-desc">Deploying ad sets, testing different hook variations, evaluating audience engagement, and CTR response.</p>
+                <span class="step-tag">Meta Ads Testing</span>
+              </div>
+            </div>
+
+            <!-- 06 OPTIMIZE -->
+            <div class="process-step" data-step="6">
+              <div class="step-marker">
+                <span class="marker-circle"></span>
+                <span class="step-num">06</span>
+              </div>
+              <div class="step-card">
+                <h3 class="step-title">OPTIMIZE</h3>
+                <p class="step-desc">Refining winning creative angles, eliminating low performers, adjusting prompt keywords, and scaling output.</p>
+                <span class="step-tag">Data-Led Growth</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRACTICAL EXPERIENCE SECTION -->
+    <section class="experience-section section-padding" id="experience">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-tag-wrapper">
+            <span class="section-tag">[ TRACK RECORD ]</span>
+            <span class="tag-sparkle">✦</span>
+          </div>
+          <h2 class="section-title">
+            PRACTICAL <span class="text-lime">EXPERIENCE</span>
+          </h2>
+          <p class="section-subtitle">
+            Hands-on execution in business building and artificial intelligence media generation. Honest, transparent, and grounded in real work.
+          </p>
+        </div>
+
+        <div class="experience-timeline">
+          <!-- 01 ENTREPRENEURIAL / E-COMMERCE PROJECT -->
+          <div class="exp-card">
+            <div class="exp-header">
+              <div class="exp-badge-group">
+                <span class="exp-num">01</span>
+                <span class="exp-tag">HANDS-ON BUSINESS</span>
+              </div>
+              <span class="exp-status">Active Project</span>
+            </div>
+
+            <div class="exp-body">
+              <div class="exp-brand-header">
+                <div class="exp-brand-avatar">
+                  <img src="assets/carnottix-logo.png" alt="Carnottix Logo" class="carnottix-logo-thumb">
+                </div>
+                <div>
+                  <h3 class="exp-role-title">ENTREPRENEURIAL / E-COMMERCE PROJECT</h3>
+                  <h4 class="exp-company-name text-lime">Carnottix (Car-themed Apparel &amp; Lifestyle)</h4>
+                </div>
+              </div>
+
+              <p class="exp-summary">
+                Founded and operated an independent product-based e-commerce project centered on automotive enthusiast apparel and accessories. Managed the complete cycle from concept to consumer.
+              </p>
+
+              <div class="exp-responsibilities">
+                <h5>Key Practical Areas Handled:</h5>
+                <ul class="resp-list">
+                  <li><strong>Brand Building:</strong> Developed logo identity, brand personality, and visual style guide.</li>
+                  <li><strong>Product Marketing:</strong> Crafted appealing benefit-focused copy and social media product showcases.</li>
+                  <li><strong>Pricing Strategy:</strong> Established cost calculations, retail pricing, and discount promotions.</li>
+                  <li><strong>Sales &amp; Customer Relations:</strong> Interacted directly with interested buyers, handled product queries, and secured orders.</li>
+                  <li><strong>Online Business Operations:</strong> Coordinated packaging, order fulfillment, stock checks, and delivery follow-ups.</li>
+                  <li><strong>Marketing Strategy &amp; Meta Ads Testing:</strong> Tested organic social reels and experimental ad creatives to engage car culture enthusiasts.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02 AI & CONTENT PROJECTS -->
+          <div class="exp-card">
+            <div class="exp-header">
+              <div class="exp-badge-group">
+                <span class="exp-num">02</span>
+                <span class="exp-tag">AI &amp; DIGITAL MEDIA</span>
+              </div>
+              <span class="exp-status">Continuous Practice</span>
+            </div>
+
+            <div class="exp-body">
+              <div class="exp-brand-header">
+                <div class="exp-brand-avatar ai-avatar">
+                  <span>🤖</span>
+                </div>
+                <div>
+                  <h3 class="exp-role-title">AI &amp; CONTENT PROJECTS</h3>
+                  <h4 class="exp-company-name text-purple">Independent Creator &amp; Prompt Explorer</h4>
+                </div>
+              </div>
+
+              <p class="exp-summary">
+                Leveraging the latest generative AI tool suites to design, storyboard, synthesize, and edit promotional commercials, concept cars, and product reels.
+              </p>
+
+              <div class="exp-responsibilities">
+                <h5>Key Practical Areas Handled:</h5>
+                <ul class="resp-list">
+                  <li><strong>AI Video Generation:</strong> Produced cinematic short films and promotional clips from scratch using cutting-edge models.</li>
+                  <li><strong>Image-to-Video Workflows:</strong> Animated still concepts and car stills with motion vectors and cinematic camera pans.</li>
+                  <li><strong>Prompt Development:</strong> Systematically engineered prompt syntax for lighting (golden hour, neon cyber, studio softbox), camera lenses, and movement.</li>
+                  <li><strong>Promotional Content Creation:</strong> Designed commercial mockups for automotive brands, paint solutions (BMC), and digital tools.</li>
+                  <li><strong>Short-Form Video Editing:</strong> Cut high-energy reels in CapCut optimized for TikTok, Instagram Reels, and YouTube Shorts pacing.</li>
+                  <li><strong>AI-Assisted Content Strategy:</strong> Streamlined copywriting and creative asset workflows using ChatGPT &amp; Gemini.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & LEARNING -->
+    <section class="education-section section-padding" id="education">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-tag-wrapper">
+            <span class="section-tag">[ ACADEMICS &amp; TRAINING ]</span>
+            <span class="tag-sparkle">✦</span>
+          </div>
+          <h2 class="section-title">
+            EDUCATION &amp; <span class="text-lime">LEARNING</span>
+          </h2>
+          <p class="section-subtitle">
+            Academic milestones paired with intensive practical digital marketing coursework.
+          </p>
+        </div>
+
+        <div class="education-grid">
+          <!-- Digital Marketing Course -->
+          <div class="edu-card highlight-card">
+            <div class="edu-badge text-lime">PROFESSIONAL SPECIALIZATION</div>
+            <h3 class="edu-title">Paid Digital Marketing Course</h3>
+            <p class="edu-institution">Comprehensive Digital Marketing Academy</p>
+            <p class="edu-desc">Practical training + in-depth self-learning covering Meta Ads Manager, performance funnels, audience targeting, creative testing, and campaign optimization.</p>
+            <div class="edu-status-tag">
+              <span class="status-pulse-dot"></span>
+              <span>Active Hands-on Practice</span>
+            </div>
+          </div>
+
+          <!-- Diploma Studies -->
+          <div class="edu-card">
+            <div class="edu-badge">TECHNICAL FOUNDATION</div>
+            <h3 class="edu-title">Diploma Studies</h3>
+            <p class="edu-institution">Technical Institution</p>
+            <p class="edu-desc">Studies undertaken building analytical problem-solving, structured workflow habits, and technical aptitude.</p>
+            <div class="edu-status-tag">
+              <span>Studies Undertaken</span>
+            </div>
+          </div>
+
+          <!-- Plus Two -->
+          <div class="edu-card">
+            <div class="edu-badge">SECONDARY EDUCATION</div>
+            <h3 class="edu-title">Higher Secondary / Plus Two</h3>
+            <p class="edu-institution">Higher Secondary Board, Kerala</p>
+            <p class="edu-desc">Successfully completed higher secondary education with a strong academic foundation.</p>
+            <div class="edu-status-tag">
+              <span>Completed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY WORK WITH ME ("WHY ADITHYAN?") -->
+    <section class="why-section section-padding" id="why-me">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-tag-wrapper">
+            <span class="section-tag">[ VALUE PROPOSITION ]</span>
+            <span class="tag-sparkle">✦</span>
+          </div>
+          <h2 class="section-title">
+            WHY <span class="text-lime">ADITHYAN?</span>
+          </h2>
+          <p class="section-subtitle">
+            What makes me a dependable, forward-thinking asset for modern marketing teams, agencies, and businesses.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <!-- 01 -->
+          <div class="why-card">
+            <div class="why-top">
+              <span class="why-number">01</span>
+              <span class="why-icon">📊</span>
+            </div>
+            <h3 class="why-title">MARKETING MINDSET</h3>
+            <p class="why-desc">
+              I combine core marketing concepts with practical experimentation. I don't just create visuals for aesthetics — I think about who the viewer is, what catches their attention, and what drives action.
+            </p>
+          </div>
+
+          <!-- 02 -->
+          <div class="why-card">
+            <div class="why-top">
+              <span class="why-number">02</span>
+              <span class="why-icon">🤖</span>
+            </div>
+            <h3 class="why-title">AI-FIRST CREATIVITY</h3>
+            <p class="why-desc">
+              I use AI tools to explore modern content creation workflows. From fast ideation to image-to-video rendering, I leverage AI to produce commercial-grade visual assets in a fraction of traditional production time.
+            </p>
+          </div>
+
+          <!-- 03 -->
+          <div class="why-card">
+            <div class="why-top">
+              <span class="why-number">03</span>
+              <span class="why-icon">💼</span>
+            </div>
+            <h3 class="why-title">BUSINESS EXPERIENCE</h3>
+            <p class="why-desc">
+              My e-commerce project gave me practical exposure to branding, marketing, pricing, and sales. I understand the real challenges of acquiring customers and managing brand operations.
+            </p>
+          </div>
+
+          <!-- 04 -->
+          <div class="why-card">
+            <div class="why-top">
+              <span class="why-number">04</span>
+              <span class="why-icon">🚀</span>
+            </div>
+            <h3 class="why-title">ALWAYS LEARNING</h3>
+            <p class="why-desc">
+              I continuously develop my skills through courses, self-learning, and hands-on projects. Fast to learn, humble to listen, and quick to adapt to new algorithm changes and tool breakthroughs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CTA SECTION -->
+    <section class="contact-section section-padding" id="contact">
+      <div class="section-container">
+        <!-- Dramatic CTA Banner -->
+        <div class="contact-banner">
+          <div class="contact-banner-glow"></div>
+          
+          <div class="contact-banner-content">
+            <div class="section-tag-wrapper">
+              <span class="section-tag">[ GET IN TOUCH ]</span>
+              <span class="tag-sparkle">✦</span>
+            </div>
+
+            <h2 class="contact-large-headline">
+              LET'S BUILD<br>
+              <span class="text-lime">SOMETHING</span><br>
+              IMPACTFUL.
+            </h2>
+
+            <p class="contact-lead-text">
+              Looking for an opportunity in <strong>Digital Marketing</strong>, <strong>Performance Marketing</strong>, <strong>Meta Ads</strong>, <strong>E-commerce</strong>, or <strong>AI-powered content creation</strong>.
+            </p>
+
+            <div class="contact-main-buttons">
+              <a href="mailto:adithyandm21@gmail.com" class="btn btn-primary magnetic-btn" data-cursor="EMAIL">
+                <span>LET'S CONNECT</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+
+              <a href="#projects" class="btn btn-secondary magnetic-btn" data-cursor="VIEW">
+                <span>VIEW MY WORK</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Information Cards + Quick Message Form -->
+        <div class="contact-details-grid">
+          <!-- Contact Channels Info -->
+          <div class="contact-channels-card">
+            <h3 class="channels-title">DIRECT CHANNELS</h3>
+            <p class="channels-subtitle">Reach out directly via email or phone. Fast responses guaranteed.</p>
+
+            <div class="channel-items">
+              <!-- Email Item -->
+              <div class="channel-row">
+                <div class="channel-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-label">EMAIL ADDRESS</span>
+                  <a href="mailto:adithyandm21@gmail.com" class="channel-value">adithyandm21@gmail.com</a>
+                </div>
+                <button class="channel-copy-btn" data-copy="adithyandm21@gmail.com" aria-label="Copy email address" title="Copy Email">
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <!-- Phone Item -->
+              <div class="channel-row">
+                <div class="channel-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-label">PHONE NUMBER</span>
+                  <a href="tel:+917306681135" class="channel-value">+91 7306681135</a>
+                </div>
+                <button class="channel-copy-btn" data-copy="+917306681135" aria-label="Copy phone number" title="Copy Phone">
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <!-- Location Item -->
+              <div class="channel-row">
+                <div class="channel-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-label">LOCATION</span>
+                  <span class="channel-value-static">Kerala, India</span>
+                </div>
+                <div class="channel-tag-static">Remote / Relocate</div>
+              </div>
+
+              <!-- LinkedIn Item -->
+              <div class="channel-row">
+                <div class="channel-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-label">LINKEDIN PROFILE</span>
+                  <a href="https://linkedin.com/in/adithyan-c" target="_blank" rel="noopener noreferrer" class="channel-value">linkedin.com/in/adithyan-c</a>
+                </div>
+                <a href="https://linkedin.com/in/adithyan-c" target="_blank" rel="noopener noreferrer" class="channel-link-btn" title="Open LinkedIn">
+                  <span>Visit ↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Message Form -->
+          <div class="contact-form-card">
+            <h3 class="form-title">SEND A QUICK INQUIRY</h3>
+            <p class="form-subtitle">Have a role, freelance project, or collaboration? Drop a quick note.</p>
+
+            <form class="quick-inquiry-form" id="quickInquiryForm">
+              <div class="form-group">
+                <label for="senderName" class="form-label">YOUR NAME</label>
+                <input type="text" id="senderName" class="form-input" placeholder="e.g. Rahul Sharma / Agency HR" required>
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail" class="form-label">YOUR EMAIL</label>
+                <input type="email" id="senderEmail" class="form-input" placeholder="name@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="inquiryType" class="form-label">TOPIC OF INTEREST</label>
+                <select id="inquiryType" class="form-select">
+                  <option value="Hiring / Full-Time Role">Hiring / Full-Time Role (Digital Marketing)</option>
+                  <option value="Performance Marketing / Meta Ads">Performance Marketing / Meta Ads</option>
+                  <option value="AI Video Creation Project">AI Video Creation Project</option>
+                  <option value="E-Commerce / Consulting">E-Commerce / Consulting</option>
+                  <option value="General Connect">General Discussion</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage" class="form-label">MESSAGE</label>
+                <textarea id="senderMessage" class="form-textarea" rows="4" placeholder="Tell me about the project or role requirements..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary full-width magnetic-btn">
+                <span>SEND MESSAGE VIA EMAIL</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top-row">
+        <!-- Footer Brand -->
+        <div class="footer-brand-col">
+          <div class="footer-monogram-wrap">
+            <img src="assets/adithyan-logo.png" alt="Adithyan Logo" class="footer-logo">
+            <span class="footer-brand-name">ADITHYAN C</span>
+          </div>
+          <p class="footer-tagline">
+            Digital Marketing Student | AI Video Creator<br>
+            Performance Marketing • Meta Ads • AI Video Creation • E-commerce
+          </p>
+          <div class="footer-location-pill">
+            <span class="pulse-dot"></span>
+            <span>Based in Kerala, India</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links-col">
+          <h4 class="footer-heading">NAVIGATION</h4>
+          <ul class="footer-nav">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Connect -->
+        <div class="footer-connect-col">
+          <h4 class="footer-heading">CONNECT</h4>
+          <ul class="footer-social-list">
+            <li><a href="mailto:adithyandm21@gmail.com" class="footer-social-link">Email</a></li>
+            <li><a href="https://linkedin.com/in/adithyan-c" target="_blank" rel="noopener noreferrer" class="footer-social-link">LinkedIn</a></li>
+            <li><a href="tel:+917306681135" class="footer-social-link">Phone (+91 7306681135)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <p class="footer-copy">
+          &copy; 2026 Adithyan C. All rights reserved. Crafted with authentic practical work.
+        </p>
+
+        <a href="#hero" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">
+          <span>BACK TO TOP</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULLSCREEN PROJECT CASE-STUDY MODAL -->
+  <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-window">
+      <!-- Close Button -->
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Project Modal">&times;</button>
+
+      <!-- Modal Content Body -->
+      <div class="modal-content" id="modalContent">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
